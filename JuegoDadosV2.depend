@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1686949266 source:c:\users\facun\onedrive\escritorio\facultad\juegodadosv2\main.cpp
+	<iostream>
+	<ctime>
+	<unordered_map>
+	"rlutil.h"
+	"dadosfacu.h"
+	"funciones.h"
+
+1686090616 c:\users\facun\onedrive\escritorio\facultad\juegodadosv2\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1686948106 c:\users\facun\onedrive\escritorio\facultad\juegodadosv2\dadosfacu.h
+	<unordered_map>
+	"rlutil.h"
+
+1686577975 c:\users\facun\onedrive\escritorio\facultad\juegodadosv2\funciones.h
+	<windows.h>
+
