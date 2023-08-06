@@ -3,7 +3,6 @@
 #include <unordered_map>
 #include "rlutil.h"
 #include "dadosfacu.h"
-#include "funciones.h"
 #define waitkey rlutil::anykey("Presiona cualquier tecla para lanzar\n")
 using namespace std;
 int main(){
@@ -17,7 +16,7 @@ int main(){
     //Ronda
     while(fin!=true){
             const rlutil::CursorHider hider;
-            recuadro(38,5,45,20,cBLANCO,cNEGRO);
+            
             //menu bienvenidos + opciones +  nombre jugador con mas puntaje y su puntaje
             menuPrin();
             gotoxy(72,8);
@@ -33,7 +32,7 @@ int main(){
                             dosJugadores=false;
                             nombreUnJug(nombreJug);
                             const rlutil::CursorHider hider;
-                            recuadro(38,5,45,20,cBLANCO,cNEGRO);
+                            
                             modosOpc();
                             cin>>opcion;
                             gotoxy(40,13);
@@ -46,7 +45,7 @@ int main(){
                             dosJugadores=true;
                             nombreDosJug(nombreJug,nombreJug2);
                             const rlutil::CursorHider hider;
-                            recuadro(38,5,45,20,cBLANCO,cNEGRO);
+                            
                             modosOpc();
                             cin>>opcion;
                             gotoxy(40,13);
@@ -111,12 +110,12 @@ int main(){
                                     return 0;
                                     break;
                                     }
-                            // Cuenta las repeticiones de cada número
+                            // Cuenta las repeticiones de cada nï¿½mero
                             std::unordered_map<int, int> repeticiones;
                             for (int i = 0; i < 6; ++i) {
                                     repeticiones[dado1[i]]++;
                             }
-                            // Verificar si algún número se repite 3 o más veces
+                            // Verificar si algï¿½n nï¿½mero se repite 3 o mï¿½s veces
                             for (const auto& par : repeticiones){
                                     //Sexteto6--
                                     if (par.second == 6 && par.first == 6){
@@ -279,7 +278,7 @@ int main(){
                             ronda=0;
                             rlutil::setColor(2);
                             gotoxy(35,10);
-                            cout<<"¡El jugador 1 ha sacado una escalera!"<<endl;
+                            cout<<"ï¿½El jugador 1 ha sacado una escalera!"<<endl;
                             rlutil::resetColor();
                         }
                         if(ganoJ2==true){
@@ -287,7 +286,7 @@ int main(){
                             ronda=0;
                             rlutil::setColor(2);
                             gotoxy(35,10);
-                            cout<<"¡El jugador 2 ha sacado una escalera!"<<endl;
+                            cout<<"ï¿½El jugador 2 ha sacado una escalera!"<<endl;
                             rlutil::resetColor();
                         }
                     }
@@ -359,9 +358,9 @@ int main(){
             gotoxy(35,11);
             system("pause");
             rlutil::cls();
-            recuadro(38,5,45,20,cBLANCO,cNEGRO);
+        
             gotoxy(40,13);
-            cout<<"¿Desea jugar otra vez? (Y = si, N = no): ";
+            cout<<"ï¿½Desea jugar otra vez? (Y = si, N = no): ";
             cin>>decision;
             rlutil::cls();
             switch (decision){

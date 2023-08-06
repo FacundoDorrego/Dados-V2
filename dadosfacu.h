@@ -4,16 +4,16 @@
 #include <unordered_map>
 #include "rlutil.h"
 using namespace std;
-int tirarDado1(int dado1[6]);
-int dadoManual(int dado1[6]);
+void tirarDado1(int dado1[6]);
+void dadoManual(int dado1[6]);
 int sextetoSeis();
 int sextetoX1(const std::unordered_map<int, int>& repeticiones);
 int trioX1(const std::unordered_map<int, int>& repeticiones);
 int sumarValores(const std::unordered_map<int, int>& repeticiones);
 bool tieneEscalera(const std::unordered_map<int, int>& repeticiones);
-char nombreUnJug(char nombreJug1[10]);
-char nombreDosJug(char nombreJug[10],char nombreJug2[10]);
-char modosOpc();
+void nombreUnJug(char nombreJug1[10]);
+void nombreDosJug(char nombreJug[10],char nombreJug2[10]);
+void modosOpc();
 void menuPrin();
 void hud();
 void cambioTurno();
@@ -21,7 +21,7 @@ void entreTurno();
 void dibuCuad();
 
 //Devuelve 6 valores aleatorios y los guarda en la lista del dado1
-int tirarDado1(int dado1[6]){
+void tirarDado1(int dado1[6]){
     rlutil::saveDefaultColor();
     srand(time(0));
     for(int i = 0; i<6;i++){
@@ -36,7 +36,7 @@ int tirarDado1(int dado1[6]){
 }
 
 //Dado manual
-int dadoManual(int dado1[6]){
+void dadoManual(int dado1[6]){
     int numM;
     gotoxy(35,8);
     cout<<"Modo Manual"<<endl;
@@ -61,7 +61,7 @@ bool tieneEscalera(const std::unordered_map<int, int>& repeticiones) {
 }
 
 
-// Sumar los valores distintos o que no se repiten más de 2 veces
+// Sumar los valores distintos o que no se repiten mï¿½s de 2 veces
 int sumarValores(const std::unordered_map<int, int>& repeticiones) {
     int suma = 0;
     for (const auto& par : repeticiones) {
@@ -132,7 +132,7 @@ int sextetoSeis(){
 }
 
 //Nombre
-char nombreUnJug(char nombreJug[10]){
+void nombreUnJug(char nombreJug[10]){
      dibuCuad();
      gotoxy(40,10);
      cout<<"Ingrese su nombre (Maximo 10 caracteres)";
@@ -142,7 +142,7 @@ char nombreUnJug(char nombreJug[10]){
 }
 
 //Nombres dos jugadores
-char nombreDosJug(char nombreJug[10],char nombreJug2[10]){
+void nombreDosJug(char nombreJug[10],char nombreJug2[10]){
      dibuCuad();
      gotoxy(33,10);
      cout<<"Ingrese el nombre del jugador 1 (Maximo 10 caracteres)";
@@ -174,7 +174,7 @@ void menuPrin(){
 }
 
 //Menu Automatico o Manual
-char modosOpc(){
+void modosOpc(){
     gotoxy(40,10);
     cout<<"A: Modo Automatico"<<endl;
     gotoxy(40,11);
